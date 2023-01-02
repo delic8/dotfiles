@@ -1,0 +1,54 @@
+set hls     "hlsearch
+set ic      "ignorecase
+set is      "incsearch
+set scs     "smartcase
+set mps     "matchpairs
+
+nnoremap <c-s> :w<CR>
+nnoremap <Tab>n :bnext<CR>
+nnoremap <Tab>p :bprevious<CR>
+nnoremap <Tab>q :bp <BAR> bd #<CR>
+nnoremap <c-b> :action CloseProject<CR>
+nnoremap <A-k> :m .-2<CR>==gi<ESC>
+nnoremap <A-j> :m .+1<CR>==gi<ESC>
+
+"Like WhickKey"
+nnoremap <Space>h :nohls<CR>
+nnoremap <Space>sf :action SearchEverywhere<CR>
+nnoremap <Space>st :action FindInPath<CR>
+nnoremap <Space>lR :action RenameElement<CR>
+"Like lsp"
+nnoremap <Space>la :action ShowIntentionActions<CR>
+nnoremap <Space>le :action ShowErrorDescription<CR>
+nnoremap <Space>ln :action GotoNextError<CR>
+nnoremap <Space>lk :action QuickJavaDoc<CR>
+vnoremap <Space>ef :action ExtractFunction<CR>
+
+nnoremap s
+
+set which-key
+set notimeout
+
+"NERDTree Setup"
+Plug 'https://github.com/preservim/nerdtree'
+Plug 'nerdtree'
+set NERDTree
+nnoremap <c-f> :NERDTreeFocus<CR>
+nnoremap <c-e> :NERDTreeToggle<CR>
+
+"Commentart Setup"
+Plug 'https://github.com/tpope/vim-commentary'
+Plug 'vim-commentary'
+Plug 'https://www.vim.org/scripts/script.php?script_id=3695'
+Plug 'tomtom/tcomment_vim'
+Plug 'tcomment_vim'
+Plug 'https://www.vim.org/scripts/script.php?script_id=1173'
+set commentary
+
+"multiple-cursors
+Plug 'https://github.com/terryma/vim-multiple-cursors'
+Plug 'vim-multiple-cursors'
+set multiple-cursors
+xmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
+
